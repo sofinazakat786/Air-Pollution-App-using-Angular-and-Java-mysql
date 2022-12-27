@@ -1,0 +1,47 @@
+.search{
+    margin-bottom: 1em;
+    text-align: center;
+}
+.search input{
+    background-color: var(--shadow-light);
+    outline: 20px;;
+    border: 10px;;
+    border-radius: 30px;
+    padding: 1em;
+    color: var(--green-1);
+    font-size: 1em;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    background-image: -o-linear-gradient();
+}
+#favr{
+    margin-bottom: 1em;
+    text-align: end;
+    height: 20px;
+
+}
+
+
+#dash{
+    align-items: center;
+    text-align: left;
+    width: 30;
+}
+#ser{
+    color: black;
+}
+nav{
+    height: 75px;
+    font-size:25px;
+    font-style: calc();
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#aqi{
+    font-size: 25px;
+    height: 25px;
+}
+
+
+

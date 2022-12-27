@@ -1,0 +1,39 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><a href="https://airqualityindex.com" class="navbar-brand" id="aqi">Air Quality Index</a></div>
+
+
+
+        <ul class="navbar-nav">
+            <li><a routerLink="/airwatcher" class="nav-link">Airwatcher</a></li>
+            <li><a routerLink="/favourite" class="nav-link">Favourites</a></li>
+        </ul>
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <!-- <form id="form"> 
+                  <input type="search" id="submit" name="q" placeholder="Search...">
+                  <button>Search</button>
+                </form> -->
+            <!-- <li><a href="/login" class="nav-link">Logout</a></li> -->
+            <div class="button">
+                <a class="btn btn-secondary" href="/login" role="button" id="" data-toggle="" aria-haspopup="true"
+                    aria-expanded="false">
+                    Logout
+                </a>
+            </div>
+        </ul>
+    </nav>
+</header>
+<h3 class=" align-item-center" id="yourfav">Your Favourites</h3>
+
+<div class="card text-dark" style="width: 25rem;" *ngFor="let res of favourites">
+    <div class="card-body ">
+        <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">{{res.cityName}}</h4>
+        </div>
+        <h6 class="card-text"><b>AQI: {{res.aqi}}</b></h6>
+        <h6 class="card-text">CO Concentration : {{res.co_conc}}</h6>
+        <h6 class="card-text">PM10 Concentration : {{res.pm10_conc}}</h6>
+        <button type="button" (click)="deleteFavourites(res.id)" (click)="refresh()"
+            class="btn btn-lg btn-outline-primary justify-content-right align-item-right">REMOVE</button>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+#yourfav{
+    color: rgb(255, 230, 0);
+    background-color: antiquewhite;
+    align-items: right;
+    align-content: center;
+    background-color: rgb(160, 207, 170);
+}
+nav{
+    height: 75px;
+    font-size:25px;
+    font-style: calc();
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#aqi{
+    font-size: 25px;
+    height: 25px;
+}

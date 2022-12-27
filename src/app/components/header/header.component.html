@@ -1,0 +1,24 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div><a href="https://airqualityindex.com" class="navbar-brand" id="aqi">Air Quality Index</a></div>
+
+
+
+    <ul class="navbar-nav">
+      <li><a *ngIf="!_service.isUserLoggedIn()" routerLink="/airwatcher" class="nav-link">Airwatcher</a></li>
+      <li><a *ngIf="!_service.isUserLoggedIn()" routerLink="/favourite" class="nav-link">Favourites</a></li>
+    </ul>
+    <ul class="navbar-nav navbar-collapse justify-content-end">
+      <!-- <form id="form"> 
+                <input type="search" id="submit" name="q" placeholder="Search...">
+                <button>Search</button>
+              </form> -->
+      <li><a *ngIf="!_service.isUserLoggedIn()" href="/login" class="nav-link">Logout</a></li>
+      <div class="button">
+        <a *ngIf="!_service.isUserLoggedIn()" class="btn btn-secondary" href="/login" role="button" id="" data-toggle="" aria-haspopup="true" aria-expanded="false">
+          Login Here
+        </a>
+      </div>
+    </ul>
+  </nav>
+</header>

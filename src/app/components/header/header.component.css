@@ -1,0 +1,10 @@
+nav{
+    height: 80px;
+    font-size:25px;
+    font-style: calc();
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#aqi{
+    font-size: 25px;
+}

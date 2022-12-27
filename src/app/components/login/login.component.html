@@ -1,0 +1,61 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div><a href="https://airqualityindex.com" class="navbar-brand" id="aqi">Air Quality Index</a></div>
+
+
+
+    <ul class="navbar-nav">
+      <!-- <li><a  routerLink="/airwatcher" class="nav-link">Airwatcher</a></li> -->
+      <!-- <li><a  routerLink="/favourite" class="nav-link">Favourites</a></li> -->
+    </ul>
+    <ul class="navbar-nav navbar-collapse justify-content-end">
+      <!-- <form id="form"> 
+                <input type="search" id="submit" name="q" placeholder="Search...">
+                <button>Search</button>
+              </form> -->
+      <!-- <li><a  href="/login" class="nav-link">Logout</a></li> -->
+      <div class="button">
+        <a class="btn btn-secondary" routerLink="/login" role="button" id="" data-toggle="" aria-haspopup="true"
+          aria-expanded="false">
+          Login Here
+        </a>
+      </div>
+    </ul>
+  </nav>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="text-center">
+        <h1>Login!</h1>
+        <h6>Please enter username & password</h6>
+      </div>
+      <form>
+        <form #loginform="ngForm" (ngSubmit)="loginUser()">
+          <!-- {{loginform.form.valid}} -->
+          <small class="text-danger">{{msg}}</small>
+          <div class="form-group">
+            <label for="exampleInputUsername">Username</label>
+            <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="userNameHelp"
+              placeholder="Enter username" name="userName" [(ngModel)]="user.userName" required #userName="ngModel"
+              [class.is-invalid]="userName.invalid && userName.touched">
+            <small class="text-danger" [class.d-none]="userName.valid || userName.untouched">Username is required
+              field</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password"
+              name="password" [(ngModel)]="user.password" required #password="ngModel"
+              [class.is-invalid]="password.invalid && password.touched">
+            <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required
+              field</small>
+          </div>
+          <!-- [disabled]="loginform.form.invalid" -->
+          <button [disabled]="loginform.form.invalid" type="submit" class="btn btn-primary mb-2">Login</button>
+        </form>
+        <a style="color: white; margin-top: 10px;" routerLink="/signup">New user? Click to signup!!</a>
+      </form>
+    </div>
+  </div>
+
+</div>
